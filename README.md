@@ -21,3 +21,4 @@ Meetings can positively or negatively impact team performance.  Microsoft Outloo
 The program provides a baseline set of reporting to perform the following:
 - Percentage of unplanned (Jira) to planned (Smartsheet) activities
 
+Install the Python software and run from a DOS command prompt.  All reports and output files will be generated.
