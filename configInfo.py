@@ -1,7 +1,6 @@
 
 import os
 import string
-import shutil
 
 if os.name == 'posix':
     configDATFileLocation = '/etc/config_linux.dat'
