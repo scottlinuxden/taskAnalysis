@@ -4,13 +4,11 @@ import string
 import shutil
 
 if os.name == 'posix':
-    # Change below to where HTi looks for it
-    configDATFileLocation = '/etc/hobart/config_linux.dat'
-    configCDATFileLocation = '/etc/hobart/configc.dat'
+    configDATFileLocation = '/etc/config_linux.dat'
+    configCDATFileLocation = '/etc/configc.dat'
 elif os.name == 'nt':
-    # Change below to where HTx looks for it (soon it will be C:\Program Files\Hobart\config.dat and configc.dat)
-    configDATFileLocation = 'C:\Program Files\Hobart\config.dat'
-    configCDATFileLocation = 'C:\Program Files\Hobart\configc.dat'
+    configDATFileLocation = 'C:\Program Files\config.dat'
+    configCDATFileLocation = 'C:\Program Files\configc.dat'
     
 def getConfigFileLocation():
     return configDATFileLocation
@@ -24,7 +22,7 @@ def getPythonInstallPath():
 
 def getRootFolder():
     if os.name == 'nt':
-        answer = "C:\\Progam Files\\Hobart"
+        answer = "C:\\Progam Files\\"
         return answer
         #return getValue('systemUserRootDir').replace('\\\\',  '\\')
     else:
@@ -37,9 +35,6 @@ def file_exists(filename):
             close(filename)
     except IOError:
         return False
-        
-def getScaleArchitectureOS():
-    return getValue('scaleArchitectureOS')
 
 def getValue(key):
     answer = None
